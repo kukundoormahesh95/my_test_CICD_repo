@@ -1,7 +1,7 @@
 name: Ci/CD pipeline
 on:
   push:
-   branches:[main]
+   branches: [main]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,11 +11,11 @@ jobs:
       - name: Login to Docker
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.user }}
+          username: ${{ secrets.username }}
           password: ${{ secrets.password }}
       - name: build,push, iamge
         env:
-          docker_username: ${{ secrets.user }}
+          docker_username: ${{ secrets.username }}
           image: my-image
         run:
           docker build -t docker_username/image
