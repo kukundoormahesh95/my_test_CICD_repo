@@ -17,7 +17,7 @@ jobs:
         env:
           docker_username: ${{ secrets.username }}
           image: my-image
-        run:
+        run: |
           docker build -t $docker_username/$image .
           docker push $docker_username/$image:latest
 
