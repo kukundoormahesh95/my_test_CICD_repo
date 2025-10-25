@@ -3,4 +3,5 @@ app=flask(__name__)
 @app.route('/')
 def index():
   print("Hello CICD")
-app.run(http://127.0.0.1,degug=True)
+if __name__= "__main__":
+  app.run(host=0.0.0.0,port=8000)
